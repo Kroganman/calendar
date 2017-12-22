@@ -5,12 +5,12 @@ int main()
 {
    int a,b,c,d,m,y,x;
    printf("Enter the date in the format: day month year\n");
-   scanf("%d %d %d",&d,&m,&y);
+   scanf("%d %d %d",&d,&m,&y); /* Read the entered date */
    a=(14-m)/12;
    b=y-a;
    c=m+12*a-2;
-   x=(7000+d+b+b/4-b/100+b/400+(31*c)/12) % 7;
-   switch(x)
+   x=(7000+d+b+b/4-b/100+b/400+(31*c)/12) % 7; /* Calculating the day of the week using formula */
+   switch(x) /* Determining the day of the week based on the value of 'x' */
    {
    case 0:
       printf("Sunday");
